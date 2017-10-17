@@ -9,11 +9,11 @@ use Rubricate\Element\IGetElement;
 class RowDataTable implements IGetElement
 {
 
-    private $e;
+    private $tr;
     
     public function __construct()
     {
-        $this->e = new CreateElement('tr');
+        $this->tr = new CreateElement('tr');
     }
 
 
@@ -22,7 +22,7 @@ class RowDataTable implements IGetElement
     {
         $td = new ColumnDataTable($data, $attr);
 
-        $this->e->addInnerJoin($td);
+        $this->tr->addInnerJoin($td);
 
         return $this;
 
@@ -33,7 +33,7 @@ class RowDataTable implements IGetElement
     {
         $tr = new HeadDataTable($data, $attr);
 
-        $this->e->addInnerJoin($tr);
+        $this->tr->addInnerJoin($tr);
 
         return $this;
 
@@ -42,9 +42,20 @@ class RowDataTable implements IGetElement
 
 
 
+
+    public function setAttribute($name, $value = NULL)
+    {
+       $this->tr->setAttribute($name, $value);
+       return $this;
+    }
+
+
+
+
+
     public function getElement()
     {
-        return $this->e->getElement();
+        return $this->tr->getElement();
     } 
 
 
