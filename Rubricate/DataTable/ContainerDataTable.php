@@ -12,7 +12,6 @@ class ContainerDataTable extends CreateElement
 
 
 
-
     public function __construct()
     {
         parent::__construct('table');
@@ -20,13 +19,5 @@ class ContainerDataTable extends CreateElement
 
 
 
-
-    
-
-
-
-
-
 }    
-
 

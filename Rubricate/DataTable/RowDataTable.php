@@ -8,9 +8,10 @@ use Rubricate\Element\IGetElement;
 
 class RowDataTable implements IGetElement
 {
-
     private $tr;
     
+    
+
     public function __construct()
     {
         $this->tr = new CreateElement('tr');
@@ -25,8 +26,8 @@ class RowDataTable implements IGetElement
         $this->tr->addInnerJoin($td);
 
         return $this;
-
     } 
+
 
 
     public function addHead($data, array $attr = array())
@@ -36,20 +37,15 @@ class RowDataTable implements IGetElement
         $this->tr->addInnerJoin($tr);
 
         return $this;
-
     } 
 
 
 
-
-
-    public function setAttribute($name, $value = NULL)
+    public function setAttribute($name, $value = null)
     {
-       $this->tr->setAttribute($name, $value);
-       return $this;
+        $this->tr->setAttribute($name, $value);
+        return $this;
     }
-
-
 
 
 
@@ -57,6 +53,7 @@ class RowDataTable implements IGetElement
     {
         return $this->tr->getElement();
     } 
+
 
 
 }    

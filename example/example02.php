@@ -14,8 +14,7 @@ $body  = new Rubricate\DataTable\BodyDataTable();
 
 foreach ($data as $key => $row)
 {
-    if($key !== 0)
-    {
+    if($key !== 0) {
         $ln = new Rubricate\DataTable\RowDataTable();
         $ln->addData('&nbsp;', array('colspan'=>2));
         $body->addInnerJoin($ln);

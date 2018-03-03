@@ -8,10 +8,7 @@ use Rubricate\Element\IGetElement;
 
 class BodyDataTable implements IGetElement
 {
-
     private $tbody;
-
-
 
 
     public function __construct()
@@ -21,17 +18,12 @@ class BodyDataTable implements IGetElement
 
 
 
-
-
     public function addInnerJoin(IGetElement $inner)
     {
         $this->tbody->addInnerJoin($inner);
 
         return $this;
-
     } 
-
-
 
 
 

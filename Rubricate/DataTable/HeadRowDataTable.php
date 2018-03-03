@@ -9,8 +9,8 @@ use Rubricate\Element\IGetElement;
 class HeadRowDataTable implements IGetElement
 {
 
-private $tr;
-private $thead;
+    private $tr;
+    private $thead;
 
 
 
@@ -22,16 +22,13 @@ private $thead;
 
 
 
-
-
     public function addHead($data, array $attr = array())
     {
         $e = new CreateElement('th');
 
         $e->addInnerText($data);
 
-        if(count($attr))
-        {
+        if(count($attr)) {
             foreach ($attr as $key => $value)
             {
                 $e->setAttribute($key, $value);
@@ -41,8 +38,8 @@ private $thead;
         $this->tr->addInnerJoin($e);
 
         return $this;
-
     } 
+
 
 
     public function getElement()

@@ -15,15 +15,12 @@ class ColumnDataTable implements IGetElement
         $this->e = new CreateElement('td');
         $this->e->addInnerText($data);
 
-        if(count($attr))
-        {
+        if(count($attr)) {
             foreach ($attr as $key => $value)
             {
                 $this->e->setAttribute($key, $value);
             }
         }
-
-
     }
 
     public function getElement()
@@ -32,7 +29,6 @@ class ColumnDataTable implements IGetElement
     } 
     
     
-
     
 }    
 

@@ -8,9 +8,9 @@ use Rubricate\Element\IGetElement;
 
 class FootRowDataTable implements IGetElement
 {
+    private $tr;
+    private $tfoot;
 
-private $tr;
-private $tfoot;
 
 
     public function __construct()
@@ -21,7 +21,6 @@ private $tfoot;
 
 
 
-
     public function addData($data, array $attr = array())
     {
         $td = new ColumnDataTable($data, $attr);
@@ -29,8 +28,8 @@ private $tfoot;
         $this->tr->addInnerJoin($td);
 
         return $this;
-
     } 
+
 
 
     public function addHead($data, array $attr = array())
@@ -40,11 +39,7 @@ private $tfoot;
         $this->tr->addInnerJoin($tr);
 
         return $this;
-
     } 
-
-
-
 
 
 
