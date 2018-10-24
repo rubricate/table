@@ -25,7 +25,7 @@ class FootRowDataTable implements IGetElement
     {
         $td = new ColumnDataTable($data, $attr);
 
-        $this->tr->addInnerJoin($td);
+        $this->tr->addChild($td);
 
         return $this;
     } 
@@ -36,7 +36,7 @@ class FootRowDataTable implements IGetElement
     {
         $tr = new HeadDataTable($data, $attr);
 
-        $this->tr->addInnerJoin($tr);
+        $this->tr->addChild($tr);
 
         return $this;
     } 
@@ -45,7 +45,7 @@ class FootRowDataTable implements IGetElement
 
     public function getElement()
     {
-        $this->tfoot->addInnerJoin($this->tr);
+        $this->tfoot->addChild($this->tr);
 
         return $this->tfoot->getElement();
     } 

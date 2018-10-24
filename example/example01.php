@@ -19,7 +19,7 @@ $header->addHead('Name');
 $header->addHead('Occupation');
 $header->addHead('User');
 
-$table->addInnerJoin($header);
+$table->addChild($header);
 
 
 foreach ($data as $k => $row)
@@ -31,11 +31,11 @@ foreach ($data as $k => $row)
     $ln->addData($row['occupation']);
     $ln->addData($row['user']);
 
-    $body->addInnerJoin($ln);
+    $body->addChild($ln);
 
 }
 
-$table->addInnerJoin($body);
+$table->addChild($body);
 
 
 echo $table->getElement();

@@ -4,6 +4,7 @@ namespace Rubricate\DataTable;
 
 use Rubricate\Element\CreateElement;
 use Rubricate\Element\IGetElement;
+use Rubricate\Element\StrElement;
 
 
 class HeadRowDataTable implements IGetElement
@@ -26,7 +27,7 @@ class HeadRowDataTable implements IGetElement
     {
         $e = new CreateElement('th');
 
-        $e->addInnerText($data);
+        $e->addChild(new StrElement($data));
 
         if(count($attr)) {
             foreach ($attr as $key => $value)
@@ -35,7 +36,7 @@ class HeadRowDataTable implements IGetElement
             }
         }
 
-        $this->tr->addInnerJoin($e);
+        $this->tr->addChild($e);
 
         return $this;
     } 
@@ -44,7 +45,7 @@ class HeadRowDataTable implements IGetElement
 
     public function getElement()
     {
-        $this->thead->addInnerJoin($this->tr);
+        $this->thead->addChild($this->tr);
 
         return $this->thead->getElement();
     } 

@@ -2,12 +2,12 @@
     "name": "rubricate/datatable",
     "authors": [
         {
-            "name": "Estefanio NS",
+            "name": "Estefanio N Santos",
             "email": "estefanions@gmail.com"
         }
     ],
     "require": {
-        "rubricate/element": "^0.2"
+        "rubricate/element": "^0.4"
     },
     "autoload": {
         "psr-4": {

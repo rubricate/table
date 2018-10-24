@@ -19,7 +19,7 @@ $header->addHead('Name');
 $header->addHead('Occupation');
 $header->addHead('Salary');
 
-$table->addInnerJoin($header);
+$table->addChild($header);
 
 
 $total = 0;
@@ -32,18 +32,18 @@ foreach ($data as $i => $row)
     $ln->addData($row['occupation']);
     $ln->addData('$ ' . $row['salary']);
 
-    $body->addInnerJoin($ln);
+    $body->addChild($ln);
 
     $total += $row['salary'];
 
 }
 
-$table->addInnerJoin($body);
+$table->addChild($body);
 
 $foot->addHead("Total", array('colspan' => 3, 'align'=>'left'));
 $foot->addData('$ ' . $total);
 
-$table->addInnerJoin($foot);
+$table->addChild($foot);
 
 echo $table->getElement();
 

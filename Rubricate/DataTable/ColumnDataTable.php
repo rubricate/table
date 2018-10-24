@@ -4,6 +4,7 @@ namespace Rubricate\DataTable;
 
 use Rubricate\Element\CreateElement;
 use Rubricate\Element\IGetElement;
+use Rubricate\Element\StrElement;
 
 
 class ColumnDataTable implements IGetElement
@@ -13,7 +14,7 @@ class ColumnDataTable implements IGetElement
     public function __construct($data, array $attr = array())
     {
         $this->e = new CreateElement('td');
-        $this->e->addInnerText($data);
+        $this->e->addChild(new StrElement($data));
 
         if(count($attr)) {
             foreach ($attr as $key => $value)

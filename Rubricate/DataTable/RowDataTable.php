@@ -23,7 +23,7 @@ class RowDataTable implements IGetElement
     {
         $td = new ColumnDataTable($data, $attr);
 
-        $this->tr->addInnerJoin($td);
+        $this->tr->addChild($td);
 
         return $this;
     } 
@@ -34,7 +34,7 @@ class RowDataTable implements IGetElement
     {
         $tr = new HeadDataTable($data, $attr);
 
-        $this->tr->addInnerJoin($tr);
+        $this->tr->addChild($tr);
 
         return $this;
     } 

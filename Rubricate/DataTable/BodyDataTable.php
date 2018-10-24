@@ -18,9 +18,9 @@ class BodyDataTable implements IGetElement
 
 
 
-    public function addInnerJoin(IGetElement $inner)
+    public function addChild(IGetElement $inner)
     {
-        $this->tbody->addInnerJoin($inner);
+        $this->tbody->addChild($inner);
 
         return $this;
     } 
