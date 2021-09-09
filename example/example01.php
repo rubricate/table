@@ -8,9 +8,9 @@ require '../vendor/autoload.php';
 $data = include 'dataArr.php';
 
 
-$table  = new Rubricate\DataTable\ContainerDataTable();
-$header = new Rubricate\DataTable\HeadRowDataTable();
-$body   = new Rubricate\DataTable\BodyDataTable();
+$table  = new Rubricate\Table\ContainerTable();
+$header = new Rubricate\Table\HeadRowTable();
+$body   = new Rubricate\Table\BodyTable();
 
 $table->setAttribute('border', '1');
 
@@ -24,7 +24,7 @@ $table->addChild($header);
 
 foreach ($data as $k => $row)
 {
-    $ln = new Rubricate\DataTable\RowDataTable();
+    $ln = new Rubricate\Table\RowTable();
 
     $ln->addData($row['id']);
     $ln->addData($row['name']);

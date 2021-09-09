@@ -1,13 +1,20 @@
 <?php 
 
-namespace Rubricate\DataTable;
+/*
+ * @package     RubricatePHP
+ * @author      Estefanio N Santos <estefanions AT gmail DOT com>
+ * @link        https://github.com/rubricate/table
+ * 
+ */
+
+namespace Rubricate\Table;
 
 use Rubricate\Element\CreateElement;
 use Rubricate\Element\IGetElement;
 use Rubricate\Element\StrElement;
 
 
-class HeadRowDataTable implements IGetElement
+class HeadRowTable implements IGetElement
 {
 
     private $tr;

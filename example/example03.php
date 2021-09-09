@@ -7,10 +7,10 @@ require '../vendor/autoload.php';
 $data = include 'dataArr.php';
 
 
-$table  = new Rubricate\DataTable\ContainerDataTable();
-$header = new Rubricate\DataTable\HeadRowDataTable();
-$body   = new Rubricate\DataTable\BodyDataTable();
-$foot   = new Rubricate\DataTable\FootRowDataTable();
+$table  = new Rubricate\Table\ContainerTable();
+$header = new Rubricate\Table\HeadRowTable();
+$body   = new Rubricate\Table\BodyTable();
+$foot   = new Rubricate\Table\FootRowTable();
 
 $table->setAttribute('border', '1');
 
@@ -25,7 +25,7 @@ $table->addChild($header);
 $total = 0;
 foreach ($data as $i => $row)
 {
-    $ln = new Rubricate\DataTable\RowDataTable();
+    $ln = new Rubricate\Table\RowTable();
 
     $ln->addData($row['id']);
     $ln->addData($row['name']);

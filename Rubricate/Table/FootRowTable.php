@@ -1,12 +1,19 @@
 <?php 
 
-namespace Rubricate\DataTable;
+/*
+ * @package     RubricatePHP
+ * @author      Estefanio N Santos <estefanions AT gmail DOT com>
+ * @link        https://github.com/rubricate/table
+ * 
+ */
+
+namespace Rubricate\Table;
 
 use Rubricate\Element\CreateElement;
 use Rubricate\Element\IGetElement;
 
 
-class FootRowDataTable implements IGetElement
+class FootRowTable implements IGetElement
 {
     private $tr;
     private $tfoot;
@@ -23,7 +30,7 @@ class FootRowDataTable implements IGetElement
 
     public function addData($data, array $attr = array())
     {
-        $td = new ColumnDataTable($data, $attr);
+        $td = new ColumnTable($data, $attr);
 
         $this->tr->addChild($td);
 
@@ -34,7 +41,7 @@ class FootRowDataTable implements IGetElement
 
     public function addHead($data, array $attr = array())
     {
-        $tr = new HeadDataTable($data, $attr);
+        $tr = new HeadTable($data, $attr);
 
         $this->tr->addChild($tr);
 

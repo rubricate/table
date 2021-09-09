@@ -1,12 +1,19 @@
 <?php 
 
-namespace Rubricate\DataTable;
+/*
+ * @package     RubricatePHP
+ * @author      Estefanio N Santos <estefanions AT gmail DOT com>
+ * @link        https://github.com/rubricate/table
+ * 
+ */
+
+namespace Rubricate\Table;
 
 use Rubricate\Element\CreateElement;
 use Rubricate\Element\IGetElement;
 
 
-class BodyDataTable implements IGetElement
+class BodyTable implements IGetElement
 {
     private $tbody;
 

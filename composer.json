@@ -1,5 +1,5 @@
 {
-    "name": "rubricate/datatable",
+    "name": "rubricate/table",
     "authors": [
         {
             "name": "Estefanio N Santos",
@@ -11,7 +11,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Rubricate\\DataTable\\": "Rubricate/DataTable/"
+            "Rubricate\\Table\\": "Rubricate/Table/"
         }
 
     }
