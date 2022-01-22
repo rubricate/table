@@ -1,5 +1,5 @@
 # Rubricate Table
-table HTML
+PHP Component to render an HTML table
 
 ```
 $ composer require rubricate/table
