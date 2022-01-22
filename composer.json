@@ -8,6 +8,7 @@
         }
     ],
     "require": {
+        "php": "^7.1",
         "rubricate/element": "^0.4"
     },
     "keywords": [
@@ -27,3 +28,4 @@
     }
 
 }
+
