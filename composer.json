@@ -1,5 +1,6 @@
 {
     "name": "rubricate/table",
+    "description": "component to render an HTML table",
     "authors": [
         {
             "name": "Estefanio N Santos",
@@ -8,6 +9,15 @@
     ],
     "require": {
         "rubricate/element": "^0.4"
+    },
+    "keywords": [
+        "rubricateframework",
+        "rubricatephp",
+        "html table"
+    ],
+    "support": {
+        "docs"   : "https://rubricate.github.io/components/table",
+        "source" : "https://github.com/rubricate/table"
     },
     "autoload": {
         "psr-4": {
