@@ -1,6 +1,7 @@
 {
     "name": "rubricate/table",
     "description": "component to render an HTML table",
+    "license": "MIT",
     "authors": [
         {
             "name": "Estefanio N Santos",
