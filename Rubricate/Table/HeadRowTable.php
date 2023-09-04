@@ -1,34 +1,21 @@
 <?php 
 
-/*
- * @package     RubricatePHP
- * @author      Estefanio N Santos <estefanions AT gmail DOT com>
- * @link        https://github.com/rubricate/table
- * 
- */
-
 namespace Rubricate\Table;
 
 use Rubricate\Element\CreateElement;
 use Rubricate\Element\IGetElement;
 use Rubricate\Element\StrElement;
 
-
 class HeadRowTable implements IGetElement
 {
-
     private $tr;
     private $thead;
-
-
 
     public function __construct()
     {
         $this->thead = new CreateElement('thead');
         $this->tr    = new CreateElement('tr');
     }
-
-
 
     public function addHead($data, array $attr = array())
     {
@@ -48,16 +35,12 @@ class HeadRowTable implements IGetElement
         return $this;
     } 
 
-
-
     public function getElement()
     {
         $this->thead->addChild($this->tr);
 
         return $this->thead->getElement();
     } 
-    
-
 
 }    
 
