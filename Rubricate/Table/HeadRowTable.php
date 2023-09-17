@@ -1,5 +1,7 @@
 <?php 
 
+declare(strict_types=1);
+
 namespace Rubricate\Table;
 
 use Rubricate\Element\CreateElement;
@@ -17,7 +19,7 @@ class HeadRowTable implements IGetElement
         $this->tr    = new CreateElement('tr');
     }
 
-    public function addHead($data, array $attr = array())
+    public function addHead($data, array $attr = array()): object
     {
         $e = new CreateElement('th');
 
@@ -35,7 +37,7 @@ class HeadRowTable implements IGetElement
         return $this;
     } 
 
-    public function getElement()
+    public function getElement(): string
     {
         $this->thead->addChild($this->tr);
 

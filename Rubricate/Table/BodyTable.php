@@ -1,5 +1,7 @@
 <?php 
 
+declare(strict_types=1);
+
 namespace Rubricate\Table;
 
 use Rubricate\Element\CreateElement;
@@ -14,14 +16,14 @@ class BodyTable implements IGetElement
         $this->tbody = new CreateElement('tbody');
     }
 
-    public function addChild(IGetElement $inner)
+    public function addChild(IGetElement $inner): object
     {
         $this->tbody->addChild($inner);
 
         return $this;
     } 
 
-    public function getElement()
+    public function getElement(): string
     {
         return $this->tbody->getElement();
     } 

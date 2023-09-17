@@ -1,5 +1,7 @@
 <?php 
 
+declare(strict_types=1);
+
 namespace Rubricate\Table;
 
 use Rubricate\Element\CreateElement;
@@ -16,14 +18,13 @@ class ColumnTable implements IGetElement
         $this->e->addChild(new StrElement($data));
 
         if(count($attr)) {
-            foreach ($attr as $key => $value)
-            {
+            foreach ($attr as $key => $value){
                 $this->e->setAttribute($key, $value);
             }
         }
     }
 
-    public function getElement()
+    public function getElement(): string
     {
         return $this->e->getElement();
     } 
